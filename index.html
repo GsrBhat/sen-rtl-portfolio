@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Sen | VLSI & RTL Design Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Rohan Sen, an Electronics and Communication Engineering student specializing in VLSI design, RTL development, and FPGA prototyping.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="silicon-theme">
+    <!-- Background Elements -->
+    <div class="pcb-overlay"></div>
+    <canvas id="signalCanvas"></canvas>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">&#x234F;</span>
+                SEN<span>.RTL</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#terminal" class="nav-link">Console</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="assets/Rohan_Sen_Resume.pdf" class="btn btn-secondary btn-nav" download>
+                    <i data-lucide="download"></i> Resume
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="active-signal-badge">
+                        <span class="pulse-dot"></span>
+                        Active Clock: 3.2 GHz
+                    </span>
+                    <span class="target-badge">Silicon Engineering</span>
+                </div>
+                <h1 class="hero-title">
+                    ENGINEERING THE NEXT ERA OF <span class="gradient-text">SILICON</span>.
+                </h1>
+                <p class="hero-subtitle">
+                    I am <strong class="highlight-name">Rohan Sen</strong>, an Electronics and Communication Engineering student. Specializing in RTL design, FPGA acceleration, and custom VLSI architectures optimized for high-performance hardware.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i data-lucide="cpu"></i> Explore Projects
+                    </a>
+                    <a href="#terminal" class="btn btn-outline">
+                        <i data-lucide="terminal"></i> Launch Console
+                    </a>
+                </div>
+                <div class="hardware-alignment">
+                    <span class="alignment-title">Target Ecosystems:</span>
+                    <div class="ecosystem-logos">
+                        <div class="eco-tag">NVIDIA</div>
+                        <div class="eco-tag">Qualcomm</div>
+                        <div class="eco-tag">Intel</div>
+                        <div class="eco-tag">AMD</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="silicon-die-container">
+                    <div class="die-glow"></div>
+                    <div class="silicon-die">
+                        <div class="die-grid-lines"></div>
+                        <div class="die-core core-north">
+                            <span>ALU CORE</span>
+                        </div>
+                        <div class="die-core core-south">
+                            <span>FIFO REG</span>
+                        </div>
+                        <div class="die-core core-east">
+                            <span>CONTROL</span>
+                        </div>
+                        <div class="die-core core-west">
+                            <span>MUX TREE</span>
+                        </div>
+                        <div class="die-center-bus">
+                            <div class="bus-clock-line"></div>
+                            <div class="bus-label">RV32I BUS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">01 //</span>
+                <h2>About Rohan Sen</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text-column">
+                    <p class="about-lead">
+                        Driven by a passion for microarchitecture and hardware efficiency, I bridge the gap between abstract algorithms and physical silicon gates.
+                    </p>
+                    <p>
+                        Currently pursuing my Bachelor of Technology in Electronics and Communication Engineering, I have focused my academic studies and independent research on Register-Transfer Level (RTL) design, timing analysis, and hardware prototyping. I build designs with synthesis awareness, clock domain safety, and timing convergence in mind.
+                    </p>
+                    <p>
+                        With solid hands-on experience using industry-standard tools like Xilinx Vivado and ModelSim, and exposure to Cadence IC design flows, I am preparing for a career in VLSI Design. I target challenging internship and pre-placement opportunities where I can contribute to advanced System-on-Chip (SoC) architectures.
+                    </p>
+                    
+                    <div class="info-details">
+                        <div class="info-item">
+                            <span class="info-label">Specialization</span>
+                            <span class="info-val">RTL Design, FPGA & VLSI Backend</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Current Ed.</span>
+                            <span class="info-val">B.Tech ECE (CGPA: 9.27 / 10.0)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-val">Hyderabad, India</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-metrics-column">
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-num">9.27</div>
+                            <div class="metric-desc">B.Tech ECE CGPA</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-num">10+</div>
+                            <div class="metric-desc">RTL Sub-modules Designed</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-num">3+</div>
+                            <div class="metric-desc">Semiconductor Certifications</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-num">0</div>
+                            <div class="metric-desc">Inferred Latches in RTL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">02 //</span>
+                <h2>Technical Stack</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <p class="section-subtitle">
+                Classified hardware design capabilities and verified engineering skill domains.
+            </p>
+
+            <div class="skills-tab-interface">
+                <div class="skills-tabs">
+                    <button class="tab-btn active" data-tab="rtl">01. RTL & Digital Design</button>
+                    <button class="tab-btn" data-tab="vlsi">02. Physical Design & STA</button>
+                    <button class="tab-btn" data-tab="fpga">03. Systems & FPGA</button>
+                    <button class="tab-btn" data-tab="software">04. Languages & Tools</button>
+                </div>
+                
+                <div class="tab-content active" id="rtl">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">Verilog HDL (RTL Modelling)</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%"></div></div>
+                            <p class="skill-details">Synchronous design, state machines (FSM), structural partitioning, and parameterization.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">Combinational & Sequential Logic</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 95%"></div></div>
+                            <p class="skill-details">Datapath optimization, arithmetic blocks, setup/hold criteria, and clocking strategies.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">Testbench Development</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 85%"></div></div>
+                            <p class="skill-details">Self-checking testbenches, directed test vectors, and functional coverage analysis.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="vlsi">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">ASIC RTL-to-GDS Flow</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%"></div></div>
+                            <p class="skill-details">Understanding of logical synthesis, placement, clock tree synthesis (CTS), and routing.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">Static Timing Analysis (STA)</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 75%"></div></div>
+                            <p class="skill-details">Setup/hold margins, timing paths (Reg-to-Reg, I/O), clock constraints, and critical path analysis.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">Physical Verification</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 70%"></div></div>
+                            <p class="skill-details">Conceptual foundation in DRC (Design Rule Checking) and LVS (Layout vs Schematic).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="fpga">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">Xilinx Vivado</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 85%"></div></div>
+                            <p class="skill-details">Synthesis, implementation, constraint entry (.XDC), and Vivado Analyzer hardware debug.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">FPGA Prototyping</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%"></div></div>
+                            <p class="skill-details">Mapping RTL to LUTs, slices, Block RAM, and DSP slices on Xilinx Artix/Kintex architectures.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">Cadence Virtuoso</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 70%"></div></div>
+                            <p class="skill-details">Schematic capture, Spectre simulation, and analog layout basics.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="software">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">C / C++ (Embedded Programming)</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%"></div></div>
+                            <p class="skill-details">Pointer manipulation, register configuration, and bare-metal firmware drivers.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">Python & Scripting</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 75%"></div></div>
+                            <p class="skill-details">Automation scripts for parsing waveforms, parsing logs, and basic test generation.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-info">
+                                <span class="skill-name">MATLAB</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%"></div></div>
+                            <p class="skill-details">Signal processing filter design, spectral analysis, and fixed-point code generation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">03 //</span>
+                <h2>Featured Projects</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <p class="section-subtitle">
+                Hardware architectures simulated, synthesized, and verified on FPGA platforms.
+            </p>
+
+            <div class="projects-list">
+                
+                <!-- Project 1: RISC-V Pipelined ALU -->
+                <div class="project-item">
+                    <div class="project-info-side">
+                        <div class="project-meta">
+                            <span class="proj-tag">Verilog HDL</span>
+                            <span class="proj-tag">Vivado</span>
+                            <span class="proj-tag">RISC-V</span>
+                        </div>
+                        <h3>RISC-V Pipelined ALU Design</h3>
+                        <p class="project-desc">
+                            Designed a 4-stage pipelined Arithmetic Logic Unit (ALU) in Verilog HDL, matching the RV32I execution specifications. Registers separate the Fetch, Decode, Execute, and Writeback stages, minimizing combinational path delays and preventing hazards.
+                        </p>
+                        <ul class="project-bullet-list">
+                            <li>Implemented 8 core instructions: ADD, SUB, AND, OR, XOR, SHL, SHR, SLT.</li>
+                            <li>Integrated data-forwarding paths and stall control to resolve Read-After-Write (RAW) data hazards.</li>
+                            <li>Validated setup/hold margins at stage boundaries using Vivado post-implementation timing analysis.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/GsrBhat" target="_blank" class="link-btn"><i data-lucide="github"></i> RTL Code</a>
+                            <a href="#" class="link-btn text-link"><i data-lucide="info"></i> Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Interactive ALU Simulator Visualizer -->
+                    <div class="project-visual-side">
+                        <div class="sim-card">
+                            <div class="sim-header">
+                                <span class="sim-title"><i data-lucide="play-circle"></i> Live Pipeline Simulator</span>
+                                <span class="sim-status" id="aluStatus">Clock Idle</span>
+                            </div>
+                            <div class="sim-body">
+                                <div class="pipeline-flow">
+                                    <div class="pipe-stage active" id="stageIF">
+                                        <div class="stage-name">IF</div>
+                                        <div class="stage-label">Fetch</div>
+                                        <div class="stage-data" id="dataIF">NOP</div>
+                                    </div>
+                                    <div class="pipe-arrow">&#x2192;</div>
+                                    <div class="pipe-stage" id="stageID">
+                                        <div class="stage-name">ID</div>
+                                        <div class="stage-label">Decode</div>
+                                        <div class="stage-data" id="dataID">NOP</div>
+                                    </div>
+                                    <div class="pipe-arrow">&#x2192;</div>
+                                    <div class="pipe-stage" id="stageEX">
+                                        <div class="stage-name">EX</div>
+                                        <div class="stage-label">Execute</div>
+                                        <div class="stage-data" id="dataEX">NOP</div>
+                                    </div>
+                                    <div class="pipe-arrow">&#x2192;</div>
+                                    <div class="pipe-stage" id="stageWB">
+                                        <div class="stage-name">WB</div>
+                                        <div class="stage-label">Writeback</div>
+                                        <div class="stage-data" id="dataWB">NOP</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="sim-control-panel">
+                                    <div class="instruction-selector">
+                                        <label for="instSelect">Select Instruction Queue:</label>
+                                        <select id="instSelect">
+                                            <option value="add_sub">ADD R1, R2, R3 → SUB R4, R1, R5</option>
+                                            <option value="raw_hazard">RAW Hazard: ADD R1, R2, R3 → ADD R4, R1, R6</option>
+                                            <option value="logic_ops">XOR R5, R1, R2 → AND R6, R5, R3</option>
+                                        </select>
+                                    </div>
+                                    <div class="sim-buttons">
+                                        <button class="btn btn-small btn-primary" id="btnStepALU">Step Clock</button>
+                                        <button class="btn btn-small btn-outline" id="btnResetALU">Reset Pipeline</button>
+                                    </div>
+                                </div>
+                                <div class="sim-console-output" id="aluConsole">
+                                    [System initialized. Load instruction queue and step clock to begin simulation.]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Parameterized N-Bit Barrel Shifter -->
+                <div class="project-item reverse">
+                    <div class="project-info-side">
+                        <div class="project-meta">
+                            <span class="proj-tag">SystemVerilog</span>
+                            <span class="proj-tag">Vivado</span>
+                            <span class="proj-tag">Logic Synthesis</span>
+                        </div>
+                        <h3>Parameterized N-Bit Barrel Shifter</h3>
+                        <p class="project-desc">
+                            Designed a parameterized N-bit barrel shifter supporting Logical Left (LSL), Logical Right (LSR), and Arithmetic Right (ASR) shifts. Utilizing a cascaded MUX-tree structure, the design shifts any bit depth in a single clock cycle, replacing slow iterative shifting loops.
+                        </p>
+                        <ul class="project-bullet-list">
+                            <li>Implemented a log2(N) stage 2-to-1 multiplexer tree for single-cycle operations.</li>
+                            <li>Verified operation across 30+ corner-cases (zero-shift, sign-extension boundaries, max shifts).</li>
+                            <li>Minimized propagation delay, compiling successfully without any inferred latches.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/GsrBhat" target="_blank" class="link-btn"><i data-lucide="github"></i> RTL Code</a>
+                            <a href="#" class="link-btn text-link"><i data-lucide="info"></i> Project Report</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Interactive Barrel Shifter Visualizer -->
+                    <div class="project-visual-side">
+                        <div class="sim-card">
+                            <div class="sim-header">
+                                <span class="sim-title"><i data-lucide="settings"></i> Barrel Shifter Logic MUX Grid</span>
+                                <span class="sim-status">Mode: Active</span>
+                            </div>
+                            <div class="sim-body">
+                                <div class="shifter-visual-container">
+                                    <div class="shifter-controls">
+                                        <div class="ctrl-group">
+                                            <label>Input (8-bit binary):</label>
+                                            <input type="text" id="shifterInput" value="11001010" maxlength="8">
+                                        </div>
+                                        <div class="ctrl-group">
+                                            <label>Shift Amount:</label>
+                                            <input type="range" id="shiftAmt" min="0" max="7" value="2">
+                                            <span class="range-val" id="shiftAmtVal">2 bits</span>
+                                        </div>
+                                        <div class="ctrl-group">
+                                            <label>Shift Type:</label>
+                                            <select id="shiftType">
+                                                <option value="LSL">LSL (Logical Left)</option>
+                                                <option value="LSR">LSR (Logical Right)</option>
+                                                <option value="ASR">ASR (Arithmetic Right)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="binary-display-wrapper">
+                                        <div class="bin-row">
+                                            <span class="bin-label">INPUT:</span>
+                                            <div class="bin-cells" id="inputBinDisplay"></div>
+                                        </div>
+                                        <div class="bin-row">
+                                            <span class="bin-label">OUTPUT:</span>
+                                            <div class="bin-cells glow-cells" id="outputBinDisplay"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mux-signals" id="muxSignalsLog">
+                                        [Select LSL Mode. Shifting 11001010 by 2 bits. Result: 00101000]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: FPGA-Accelerated Matrix Multiplier -->
+                <div class="project-item">
+                    <div class="project-info-side">
+                        <div class="project-meta">
+                            <span class="proj-tag">SystemVerilog</span>
+                            <span class="proj-tag">Hardware Accelerator</span>
+                            <span class="proj-tag">Systolic Array</span>
+                        </div>
+                        <h3>Systolic Matrix Multiplier Unit</h3>
+                        <p class="project-desc">
+                            Developed an FPGA-optimized 4x4 Systolic Array Matrix Multiplier in SystemVerilog. Optimized for edge AI and tensor operations, it achieves high data reuse by propagating inputs through localized processing elements (PEs).
+                        </p>
+                        <ul class="project-bullet-list">
+                            <li>Implemented 16 PEs containing 16-bit MAC (Multiply-Accumulate) units and local registers.</li>
+                            <li>Reduced RAM bandwidth demands by loading data inputs and propagating values horizontally/vertically.</li>
+                            <li>Synthesized on a Xilinx Artix-7 board, meeting target clock frequencies at minimal power.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/GsrBhat" target="_blank" class="link-btn"><i data-lucide="github"></i> RTL Code</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-visual-side">
+                        <div class="sim-card">
+                            <div class="sim-header">
+                                <span class="sim-title"><i data-lucide="layers"></i> 4x4 Systolic Array Flow</span>
+                                <span class="sim-status" id="systolicStatus">Ready</span>
+                            </div>
+                            <div class="sim-body">
+                                <div class="systolic-grid">
+                                    <!-- 4x4 array of processing elements -->
+                                    <div class="pe-node" id="pe_0_0">PE<sub>0,0</sub></div>
+                                    <div class="pe-node" id="pe_0_1">PE<sub>0,1</sub></div>
+                                    <div class="pe-node" id="pe_0_2">PE<sub>0,2</sub></div>
+                                    <div class="pe-node" id="pe_0_3">PE<sub>0,3</sub></div>
+                                    
+                                    <div class="pe-node" id="pe_1_0">PE<sub>1,0</sub></div>
+                                    <div class="pe-node" id="pe_1_1">PE<sub>1,1</sub></div>
+                                    <div class="pe-node" id="pe_1_2">PE<sub>1,2</sub></div>
+                                    <div class="pe-node" id="pe_1_3">PE<sub>1,3</sub></div>
+                                    
+                                    <div class="pe-node" id="pe_2_0">PE<sub>2,0</sub></div>
+                                    <div class="pe-node" id="pe_2_1">PE<sub>2,1</sub></div>
+                                    <div class="pe-node" id="pe_2_2">PE<sub>2,2</sub></div>
+                                    <div class="pe-node" id="pe_2_3">PE<sub>2,3</sub></div>
+                                    
+                                    <div class="pe-node" id="pe_3_0">PE<sub>3,0</sub></div>
+                                    <div class="pe-node" id="pe_3_1">PE<sub>3,1</sub></div>
+                                    <div class="pe-node" id="pe_3_2">PE<sub>3,2</sub></div>
+                                    <div class="pe-node" id="pe_3_3">PE<sub>3,3</sub></div>
+                                </div>
+                                <div class="systolic-controls">
+                                    <button class="btn btn-small btn-primary" id="btnStepSystolic">Pulse Core Clock</button>
+                                    <button class="btn btn-small btn-outline" id="btnResetSystolic">Reset Array</button>
+                                </div>
+                                <div class="sim-console-output" id="systolicConsole">
+                                    [Click Pulse to propagate matrix operands through processing cells.]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Education Section -->
+    <section class="certifications" id="certifications">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">04 //</span>
+                <h2>Education & Credentials</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="edu-cert-layout">
+                <!-- Education Timeline -->
+                <div class="edu-section">
+                    <h3>Education Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2023 - Present</span>
+                            <h4 class="timeline-title">B.Tech in Electronics & Communication Engineering</h4>
+                            <p class="timeline-location">National Institute of Technology</p>
+                            <p class="timeline-desc">Specialized Focus in Digital System Design and Microelectronics. Current Cumulative GPA: 9.27/10.0</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2020 - 2023</span>
+                            <h4 class="timeline-title">Diploma in Electronics & Communication Engineering</h4>
+                            <p class="timeline-location">State Polytechnic College</p>
+                            <p class="timeline-desc">Graduated with Distinction and top academic honors. CGPA: 9.17 / 10.0</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications Grid -->
+                <div class="cert-section">
+                    <h3>Professional Certifications</h3>
+                    <div class="cert-grid">
+                        <div class="cert-card">
+                            <div class="cert-icon-wrapper">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <div class="cert-info-text">
+                                <h4>Digital VLSI Design</h4>
+                                <p class="cert-issuer">NPTEL | IIT Madras</p>
+                                <p class="cert-summary">Elite Gold certificate. Core curriculum in CMOS device dynamics, layout structures, and circuit optimizations.</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon-wrapper">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <div class="cert-info-text">
+                                <h4>ASIC VLSI RTL to GDS Flow</h4>
+                                <p class="cert-issuer">IIIT Delhi Program</p>
+                                <p class="cert-summary">In-depth training spanning RTL synthesis, constraint writing, floorplanning, CTS, and physical route optimizations.</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon-wrapper">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <div class="cert-info-text">
+                                <h4>VLSI SoC Design Methodologies</h4>
+                                <p class="cert-issuer">Maven Silicon Certification</p>
+                                <p class="cert-summary">Industry-aligned training on System-on-Chip front-end workflows, IP integration, and verification flows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLI HardWare Terminal Console Section -->
+    <section class="terminal-section" id="terminal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">05 //</span>
+                <h2>Developer Hardware Console</h2>
+                <div class="header-line"></div>
+            </div>
+            <p class="section-subtitle">
+                Access local profile metadata directly. Type help to see available shell registers.
+            </p>
+            
+            <div class="terminal-container">
+                <div class="terminal-bar">
+                    <div class="terminal-buttons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="terminal-title">bash --port=/dev/tty.silicon0</div>
+                </div>
+                <div class="terminal-screen" id="terminalScreen">
+                    <div class="terminal-output">
+                        <p class="term-green">========================================================</p>
+                        <p class="term-green">       SEN.RTL BOARD CONTROLLER CONSOLE (v1.0.4)       </p>
+                        <p class="term-green">========================================================</p>
+                        <p class="term-muted">Target hardware detected: NIT_ECE_BOARD_V2</p>
+                        <p class="term-muted">Clock Status: OK | Regs Locked | Ready for input</p>
+                        <p class="term-cyan">Type 'help' and press Enter to list commands.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="term-prompt">rohan@nit_ece_core:~$</span>
+                        <input type="text" id="terminalInput" autofocus autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">06 //</span>
+                <h2>Contact & Inquiries</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Let's Connect</h3>
+                    <p class="contact-intro">
+                        Open for pre-placement interviews, research collaborations, and summer internships in digital hardware, RTL, and Physical Design.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="c-item">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <span>Email Address</span>
+                                <a href="mailto:rohan.sen.ece@gmail.com">rohan.sen.ece@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <span>Direct Dial</span>
+                                <a href="tel:+919876543210">+91-9876543210</a>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <i data-lucide="github"></i>
+                            <div>
+                                <span>GitHub Repository</span>
+                                <a href="https://github.com/GsrBhat" target="_blank">github.com/GsrBhat</a>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <i data-lucide="linkedin"></i>
+                            <div>
+                                <span>LinkedIn Link</span>
+                                <a href="https://linkedin.com/in/sairahulbhatg" target="_blank">linkedin.com/in/sairahulbhatg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-side">
+                    <form id="contactForm" class="glass-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="formName">Name / Organization</label>
+                                <input type="text" id="formName" required placeholder="NVIDIA Talent Acquisition">
+                            </div>
+                            <div class="form-group">
+                                <label for="formEmail">Email Address</label>
+                                <input type="email" id="formEmail" required placeholder="recruiter@nvidia.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formSubject">Subsystem / Topic</label>
+                            <input type="text" id="formSubject" required placeholder="Summer 2026 RTL Design Internship">
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage">Message / Design Specifications</label>
+                            <textarea id="formMessage" required rows="5" placeholder="Hi Rohan, we reviewed your RISC-V pipelined ALU project and would like to schedule a technical screening..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                            <i data-lucide="send"></i> Transmit Signal
+                        </button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span class="logo-icon">&#x234F;</span> SEN.RTL
+            </div>
+            <p class="footer-copy">
+                Rohan Sen &copy; 2026. All rights reserved. Synthesized with clean HTML, CSS, and vanilla JS.
+            </p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Logic File -->
+    <script src="script.js"></script>
+</body>
+</html>
