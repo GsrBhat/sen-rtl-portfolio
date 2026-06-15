@@ -1805,3 +1805,305 @@ section {
 .corner-bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
 .corner-br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
 
+/* ==========================================================================
+   FOUNDER MODAL & FOOTER TRIGGERS
+   ========================================================================== */
+.brand-divider {
+    color: var(--border-color);
+    margin: 0 8px;
+    user-select: none;
+}
+
+.founder-trigger-link {
+    color: var(--color-electric-blue);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: var(--transition-fast);
+}
+
+.founder-trigger-link:hover {
+    color: var(--color-neon-lime);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.founder-trigger-link i {
+    width: 14px;
+    height: 14px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(4, 6, 12, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Modal Card */
+.modal-card {
+    background: #060913;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 760px;
+    box-shadow: 0 20px 50px rgba(0, 240, 255, 0.15);
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-header {
+    background: #0c1122;
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-electric-blue);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-title i {
+    width: 16px;
+    height: 16px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #ef4444;
+}
+
+.modal-body {
+    padding: 28px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Founder Details Layout */
+.founder-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 32px;
+}
+
+.founder-photo-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.founder-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    background: #0b0f19;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.founder-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    filter: grayscale(10%) contrast(105%);
+}
+
+.founder-scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 240, 255, 0) 0%,
+        rgba(0, 240, 255, 0.04) 10%,
+        rgba(0, 240, 255, 0) 20%
+    );
+    background-size: 100% 16px;
+    pointer-events: none;
+    animation: scanline 6s linear infinite;
+}
+
+.founder-info-side h3 {
+    font-size: 1.65rem;
+    margin-bottom: 2px;
+    letter-spacing: -0.01em;
+}
+
+.founder-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-copper-gold);
+    display: block;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.founder-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.founder-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    border-top: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-color);
+    padding: 16px 0;
+    margin-bottom: 24px;
+}
+
+.f-metric {
+    text-align: center;
+}
+
+.f-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.f-val {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-electric-blue);
+}
+
+.founder-section-block {
+    margin-bottom: 20px;
+}
+
+.f-block-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-copper-gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+    border-left: 2px solid var(--color-copper-gold);
+    padding-left: 8px;
+}
+
+.founder-list {
+    list-style: none;
+}
+
+.founder-list li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.founder-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-electric-blue);
+    font-weight: 700;
+}
+
+.founder-contact-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.f-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    transition: var(--transition-fast);
+}
+
+.f-contact-btn:hover {
+    border-color: var(--color-electric-blue);
+    background: rgba(0, 240, 255, 0.05);
+    color: var(--color-electric-blue);
+}
+
+.f-contact-btn i {
+    width: 12px;
+    height: 12px;
+}
+
+/* Modal Responsive Rules */
+@media screen and (max-width: 768px) {
+    .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .founder-photo-side {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .brand-divider {
+        display: none;
+    }
+    
+    .footer-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+}

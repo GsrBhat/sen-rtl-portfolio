@@ -624,4 +624,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         });
     }
+
+    // ==========================================================================
+    // FOUNDER MODAL DIALOG TOGGLE
+    // ==========================================================================
+    const founderLink = document.getElementById('founderLink');
+    const founderModal = document.getElementById('founderModal');
+    const closeFounderModal = document.getElementById('closeFounderModal');
+
+    if (founderLink && founderModal && closeFounderModal) {
+        founderLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            founderModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // prevent background scrolling
+        });
+
+        const closeModalFunc = () => {
+            founderModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeFounderModal.addEventListener('click', closeModalFunc);
+
+        // Close when clicking outside the modal card
+        founderModal.addEventListener('click', (e) => {
+            if (e.target === founderModal) {
+                closeModalFunc();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && founderModal.classList.contains('active')) {
+                closeModalFunc();
+            }
+        });
+    }
 });
