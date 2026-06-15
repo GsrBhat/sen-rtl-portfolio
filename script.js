@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 terminalInput.value = '';
                 
                 // Print command
-                appendTerminalLine(`sairahul@ece_core:~$ ${command}`, 'term-cyan');
+                appendTerminalLine(`visitor@sen_rtl_core:~$ ${command}`, 'term-cyan');
                 
                 // Parse command
                 executeTerminalCommand(command);
@@ -512,65 +512,65 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (cmd) {
             case 'help':
                 appendTerminalLine('Available registers (commands):');
-                appendTerminalLine('  about             Prints professional bio and metrics.');
-                appendTerminalLine('  skills            List of verified engineering skills.');
-                appendTerminalLine('  projects          Displays highlight hardware projects.');
-                appendTerminalLine('  neofetch          Spits system status in neofetch format.');
+                appendTerminalLine('  about             Prints platform description and focus.');
+                appendTerminalLine('  skills            List of semiconductor engineering capabilities.');
+                appendTerminalLine('  projects          Displays active RTL IP core highlights.');
+                appendTerminalLine('  neofetch          Spits system stats in neofetch format.');
                 appendTerminalLine('  status            Queries simulated board sensors.');
-                appendTerminalLine('  download-resume   Opens PDF resume directly.');
+                appendTerminalLine('  download-spec     Downloads the engineering capabilities sheet.');
                 appendTerminalLine('  clear             Flushes screen buffer.');
                 break;
                 
             case 'about':
-                appendTerminalLine('Profile: G. Sai Rahul Bhat');
-                appendTerminalLine('Specialization: Electronics and Communication Engineering');
-                appendTerminalLine('Focus: Hardware design, RTL logic, VLSI physical layout architectures.');
-                appendTerminalLine('Academic Profile: Anurag University B.Tech Student (GPA: 8.01/10.0), Diploma (GPA: 9.17/10.0).');
+                appendTerminalLine('Brand: SEN.RTL');
+                appendTerminalLine('Type: Independent Digital Design & Semiconductor Engineering Brand');
+                appendTerminalLine('Description: Showcase of digital design, RTL development, FPGA prototyping, and semiconductor innovation.');
+                appendTerminalLine('Methods: Synthesis-aware RTL coding, clock-domain analysis, STA closures.');
                 break;
                 
             case 'skills':
                 appendTerminalLine('--- Digital Design & RTL ---', 'term-yellow');
-                appendTerminalLine('  Verilog HDL, Testbenches, Logic Partitioning, Synthesis-aware RTL');
+                appendTerminalLine('  Verilog HDL, SystemVerilog, FSM Controllers, Data-forwarding Pipelines');
                 appendTerminalLine('--- Physical Design & STA ---', 'term-yellow');
-                appendTerminalLine('  Floorplanning, Clock Tree Synthesis (CTS), Routing, MCMM timing closure');
+                appendTerminalLine('  Logic Synthesis, Floorplanning, CTS, Routing, MCMM timing closure');
                 appendTerminalLine('--- Systems & Tools ---', 'term-yellow');
                 appendTerminalLine('  Xilinx Vivado, ModelSim, Cadence Virtuoso, MATLAB, C, Python');
                 break;
                 
             case 'projects':
-                appendTerminalLine('Highlights:');
+                appendTerminalLine('Highlight IP Cores:');
                 appendTerminalLine('1. RISC-V Pipelined ALU (Verilog RTL, Vivado)');
-                appendTerminalLine('   4-stage pipeline with hazard forwarding logic, waveforms verified.');
+                appendTerminalLine('   4-stage instruction path with RAW bypass forwarding.');
                 appendTerminalLine('2. Parameterized Barrel Shifter (Verilog structural)');
-                appendTerminalLine('   MUX-tree architecture, zero latency loops, timing clean.');
+                appendTerminalLine('   High-speed single-cycle MUX tree layout.');
                 appendTerminalLine('3. Systolic Array Matrix Multiplier (SystemVerilog)');
-                appendTerminalLine('   4x4 systolic core optimized for tensor MAC computations.');
+                appendTerminalLine('   2D systolic core optimized for spatial MAC tensor operations.');
                 break;
 
             case 'neofetch':
-                appendTerminalLine('      _.._          sairahul@ece_core');
-                appendTerminalLine('    .\' .-\' \`.       -----------------');
-                appendTerminalLine('   /  /  .-. \\      OS: ANURAG_ECE_BOARD_V1');
-                appendTerminalLine('   |  |  | | |      Kernel: RTL-to-GDS-Flow v1.0');
-                appendTerminalLine('   \\  \\  `-\' /      Uptime: 6 Semesters (est)');
-                appendTerminalLine('    \`. `-.-\' \`      CGPA: B.Tech (8.01), Diploma (9.17)');
+                appendTerminalLine('      _.._          visitor@sen_rtl_core');
+                appendTerminalLine('    .\' .-\' \`.       --------------------');
+                appendTerminalLine('   /  /  .-. \\      OS: SEN_RTL_CORE_V1');
+                appendTerminalLine('   |  |  | | |      Kernel: Silicon-Logic-Engine v2.4');
+                appendTerminalLine('   \\  \\  `-\' /      Uptime: R&D Operations active');
+                appendTerminalLine('    \`. `-.-\' \`      Coverage: 100% Functional verification');
                 appendTerminalLine('      `\'`           Shell: bash/tcl-vivado');
-                appendTerminalLine('                    RTL-HDL: Verilog HDL');
+                appendTerminalLine('                    Focus: RTL, FPGA, ASIC, STA');
                 appendTerminalLine('                    EDA-Tools: Xilinx Vivado, Cadence Virtuoso');
                 break;
                 
             case 'status':
-                appendTerminalLine('Reading ANURAG_ECE_BOARD_V1 sensors...');
+                appendTerminalLine('Reading SEN_RTL_CORE_V1 sensors...');
                 appendTerminalLine('  Voltage Rail 1.2V Core : 1.198 V [OK]', 'term-green');
                 appendTerminalLine('  System Temp            : 39.4°C [OK]', 'term-green');
                 appendTerminalLine('  Current Clock Speed    : 3.20 GHz [MAX]', 'term-green');
                 appendTerminalLine('  Fan Duty Cycle         : 28% [AUTO]');
                 break;
                 
-            case 'download-resume':
-                appendTerminalLine('Opening resume connection stream... Download requested.', 'term-green');
+            case 'download-spec':
+                appendTerminalLine('Opening spec sheet connection stream... Download requested.', 'term-green');
                 setTimeout(() => {
-                    window.open('assets/Sai_Rahul_Bhat_Resume.pdf', '_blank');
+                    window.open('assets/SEN_RTL_Capabilities_Spec.pdf', '_blank');
                 }, 800);
                 break;
                 
