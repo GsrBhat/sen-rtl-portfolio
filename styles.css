@@ -1658,3 +1658,152 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   PROJECT VISUALIZER SUB-TABS & IMAGE VIEWERS
+   ========================================================================== */
+.sim-tabs-nav {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sim-tab-btn {
+    background: none;
+    border: none;
+    padding: 6px 12px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.sim-tab-btn:hover {
+    color: var(--color-electric-blue);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.sim-tab-btn.active {
+    color: var(--color-electric-blue);
+    background: rgba(0, 240, 255, 0.1);
+    border-color: rgba(0, 240, 255, 0.2);
+}
+
+.sim-tab-content {
+    display: none;
+}
+
+.sim-tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-viewer {
+    text-align: center;
+    padding: 8px 0;
+}
+
+.hw-report-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    background: #02040a;
+}
+
+.img-caption {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   PROFILE PICTURE INTEGRATION
+   ========================================================================== */
+.about-visual-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 360px;
+}
+
+.profile-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #0b0f19;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4), inset 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    filter: grayscale(10%) contrast(110%);
+    transition: var(--transition-normal);
+}
+
+.profile-frame:hover .profile-photo {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.02);
+}
+
+.frame-scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 240, 255, 0) 0%,
+        rgba(0, 240, 255, 0.03) 10%,
+        rgba(0, 240, 255, 0) 20%
+    );
+    background-size: 100% 20px;
+    pointer-events: none;
+    animation: scanline 8s linear infinite;
+    z-index: 2;
+}
+
+@keyframes scanline {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+.frame-corner {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--color-electric-blue);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.corner-tl { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+.corner-tr { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+.corner-bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+.corner-br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+

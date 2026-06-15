@@ -3,6 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
     // ==========================================================================
+    // PROJECT SUB-TABS INTERACTIVE SHIFT (SIMULATOR VS SCHEMATIC VS WAVEFORM)
+    // ==========================================================================
+    const simCards = document.querySelectorAll('.sim-card');
+    simCards.forEach(card => {
+        const tabBtns = card.querySelectorAll('.sim-tab-btn');
+        const tabContents = card.querySelectorAll('.sim-tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active classes inside this card only
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active to current clicked button
+                btn.classList.add('active');
+                
+                // Find and show corresponding content block inside this card
+                const tabName = btn.getAttribute('data-tab-name');
+                const matchingContent = card.querySelector(`.sim-tab-content[data-content-name="${tabName}"]`);
+                if (matchingContent) {
+                    matchingContent.classList.add('active');
+                }
+            });
+        });
+    });
+
+    // ==========================================================================
     // MOBILE MENU LOGIC
     // ==========================================================================
     const menuToggle = document.getElementById('menuToggle');
@@ -460,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 terminalInput.value = '';
                 
                 // Print command
-                appendTerminalLine(`rohan@nit_ece_core:~$ ${command}`, 'term-cyan');
+                appendTerminalLine(`sairahul@ece_core:~$ ${command}`, 'term-cyan');
                 
                 // Parse command
                 executeTerminalCommand(command);
@@ -495,55 +522,55 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
                 
             case 'about':
-                appendTerminalLine('Profile: Rohan Sen');
+                appendTerminalLine('Profile: G. Sai Rahul Bhat');
                 appendTerminalLine('Specialization: Electronics and Communication Engineering');
-                appendTerminalLine('Focus: Hardware design, RTL logic, VLSI Physical layout architectures.');
-                appendTerminalLine('Academic Profile: NIT B.Tech Student (GPA: 9.27/10.0).');
+                appendTerminalLine('Focus: Hardware design, RTL logic, VLSI physical layout architectures.');
+                appendTerminalLine('Academic Profile: Anurag University B.Tech Student (GPA: 8.01/10.0), Diploma (GPA: 9.17/10.0).');
                 break;
                 
             case 'skills':
                 appendTerminalLine('--- Digital Design & RTL ---', 'term-yellow');
-                appendTerminalLine('  Verilog, SystemVerilog, Logic Partitioning, Timing Constraints');
+                appendTerminalLine('  Verilog HDL, Testbenches, Logic Partitioning, Synthesis-aware RTL');
                 appendTerminalLine('--- Physical Design & STA ---', 'term-yellow');
                 appendTerminalLine('  Floorplanning, Clock Tree Synthesis (CTS), Routing, MCMM timing closure');
                 appendTerminalLine('--- Systems & Tools ---', 'term-yellow');
-                appendTerminalLine('  Xilinx Vivado, Cadence Virtuoso, ModelSim, MATLAB, Python, C');
+                appendTerminalLine('  Xilinx Vivado, ModelSim, Cadence Virtuoso, MATLAB, C, Python');
                 break;
                 
             case 'projects':
                 appendTerminalLine('Highlights:');
                 appendTerminalLine('1. RISC-V Pipelined ALU (Verilog RTL, Vivado)');
-                appendTerminalLine('   4-stage pipeline with hazard forwarding logic.');
+                appendTerminalLine('   4-stage pipeline with hazard forwarding logic, waveforms verified.');
                 appendTerminalLine('2. Parameterized Barrel Shifter (Verilog structural)');
-                appendTerminalLine('   MUX-tree architecture, zero latency loops.');
+                appendTerminalLine('   MUX-tree architecture, zero latency loops, timing clean.');
                 appendTerminalLine('3. Systolic Array Matrix Multiplier (SystemVerilog)');
-                appendTerminalLine('   2D systolic core optimized for hardware tensor dot-products.');
+                appendTerminalLine('   4x4 systolic core optimized for tensor MAC computations.');
                 break;
 
             case 'neofetch':
-                appendTerminalLine('      _.._          rohan@nit_ece_core');
-                appendTerminalLine('    .\' .-\' \`.       ------------------');
-                appendTerminalLine('   /  /  .-. \\      OS: NIT_ECE_BOARD_V2');
-                appendTerminalLine('   |  |  | | |      Kernel: RTL-to-GDS-Flow v1.2');
-                appendTerminalLine('   \\  \\  `-\' /      Uptime: 20 Semesters (est)');
-                appendTerminalLine('    \`. `-.-\' \`      CGPA: 9.27 / 10.0');
+                appendTerminalLine('      _.._          sairahul@ece_core');
+                appendTerminalLine('    .\' .-\' \`.       -----------------');
+                appendTerminalLine('   /  /  .-. \\      OS: ANURAG_ECE_BOARD_V1');
+                appendTerminalLine('   |  |  | | |      Kernel: RTL-to-GDS-Flow v1.0');
+                appendTerminalLine('   \\  \\  `-\' /      Uptime: 6 Semesters (est)');
+                appendTerminalLine('    \`. `-.-\' \`      CGPA: B.Tech (8.01), Diploma (9.17)');
                 appendTerminalLine('      `\'`           Shell: bash/tcl-vivado');
-                appendTerminalLine('                    RTL-HDL: Verilog, SystemVerilog');
+                appendTerminalLine('                    RTL-HDL: Verilog HDL');
                 appendTerminalLine('                    EDA-Tools: Xilinx Vivado, Cadence Virtuoso');
                 break;
                 
             case 'status':
-                appendTerminalLine('Reading NIT_ECE_BOARD_V2 sensors...');
-                appendTerminalLine('  Voltage Rail 1.2V Core : 1.205 V [OK]', 'term-green');
-                appendTerminalLine('  System Temp            : 42.8°C [OK]', 'term-green');
+                appendTerminalLine('Reading ANURAG_ECE_BOARD_V1 sensors...');
+                appendTerminalLine('  Voltage Rail 1.2V Core : 1.198 V [OK]', 'term-green');
+                appendTerminalLine('  System Temp            : 39.4°C [OK]', 'term-green');
                 appendTerminalLine('  Current Clock Speed    : 3.20 GHz [MAX]', 'term-green');
-                appendTerminalLine('  Fan Duty Cycle         : 32% [AUTO]');
+                appendTerminalLine('  Fan Duty Cycle         : 28% [AUTO]');
                 break;
                 
             case 'download-resume':
                 appendTerminalLine('Opening resume connection stream... Download requested.', 'term-green');
                 setTimeout(() => {
-                    window.open('assets/Rohan_Sen_Resume.pdf', '_blank');
+                    window.open('assets/Sai_Rahul_Bhat_Resume.pdf', '_blank');
                 }, 800);
                 break;
                 
